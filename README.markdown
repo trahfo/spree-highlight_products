@@ -1,33 +1,23 @@
-# Promotions
+# Highlight Products
 
-Basic support for selecting a group of products to highlight
+This is an extension for [Spree][1], put together by [jomz][2]
 
-## usage
+This extension makes it possible to 'highlight' certain products that you can then easily show on the homepage for example. Highlighting a product updates a newly added timestamp on the Product model. There is also a named scope Product.highlighted, which selects all products that have been highlighted, and orders them so that the first in the result is the last one highlighted. There is no 'unhighlight' button.
 
-set promotions by calling "Promotions.create :product => some_prod" in the 
-console etc (no nice admin interface yet)
+I started off with [paulcc's promotions extension][3], but the only thing left of it is the best\_sellers method, which I moved to the Product model..
+There is an [other extension also called promotions][4], which better deserves the name, as it's about actual promotions (lowered prices), and not about promoting something to the home page.
 
-call Promotions.random_subset(n) to get n products
+## Installation
 
-call Promotions.best_sellers(n, start = 1.week.ago, finish = Time.now) to get 
-the n best sellers in the selected time period (default: the past week)
+Copy to your project's vendor/extensions dir, and make sure the naming is right (remove the 'spree-' prefix).
+Run rake db:migrate.
+Reboot the server.
 
+[1]: http://spreecommerce.com/ "Spree: Open Source E-Commerce for Ruby on Rails"
+[2]: http://hardcoreforkingaction.com "Hard-core forking action: a low frequency, web-tech blog by Benny Degezelle"
+[3]: http://github.com/paulcc/spree-promotions/network "Promotions extension by Paul Callaghan"
+[4]: http://ext.spreecommerce.com/extensions/46-promotions "Promotions extension by Marcin Raczkowski"
 
+## Usage
 
-
-## implementation etc
-
-at present: just a table of ids, with no uniqueness checking
-
-
-
-## TODO list 
-
-  0. admin interface
-     flag on each product? or drop-down list?
-
-  2. filter this by taxons??
-
-  3. maybe extend to "also bought"?
-
-
+Highlight products from the admin/products index page. Then you can use <code>Product.highlighted(:limit => 3)</code> anywhere to get the last 3 highlighted products.

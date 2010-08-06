@@ -1,0 +1,5 @@
+---
+en:
+  highlight_products:
+    do_highlight: Highlight
+    product_has_been_highlighted: The product has been highlighted
