@@ -11,6 +11,13 @@ class HighlightProductsExtension < Spree::Extension
         flash[:notice] = t("highlight_products.product_has_been_highlighted")
         redirect_to admin_products_url
       end
+      
+      def unhighlight
+        load_object
+        @product.unhighlight
+        flash[:notice] = t("highlight_products.product_has_been_unhighlighted")
+        redirect_to admin_products_url
+      end
     end
     
     Product.class_eval do
@@ -18,6 +25,10 @@ class HighlightProductsExtension < Spree::Extension
       
       def highlight
         self.update_attribute(:highlighted_at, Time.current)
+      end
+      
+      def unhighlight
+        self.update_attribute(:highlighted_at, nil)
       end
       
       private
