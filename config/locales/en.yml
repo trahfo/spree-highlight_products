@@ -1,0 +1,7 @@
+---
+en:
+  highlight_products:
+    do_highlight: Highlight
+    do_unhighlight: Un-highlight
+    product_has_been_highlighted: The product has been highlighted
+    product_has_been_unhighlighted: The product is no longer highlighted

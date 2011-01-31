@@ -1,0 +1,7 @@
+---
+et:
+  highlight_products:
+    do_highlight: Tõsta esile
+    do_unhighlight: Eemalda esiletõstetute hulgast
+    product_has_been_highlighted: Toode on esile tõstetud
+    product_has_been_unhighlighted: Toode ei ole enam esile tõstetud

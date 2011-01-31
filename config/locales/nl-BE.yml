@@ -1,0 +1,7 @@
+---
+nl-BE:
+  highlight_products:
+    do_highlight: In de kijker zetten
+    do_unhighlight: Uit de kijker halen
+    product_has_been_highlighted: Het product werd in de kijker gezet
+    product_has_been_unhighlighted: Het product staat niet langer in de kijker

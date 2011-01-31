@@ -1,0 +1,5 @@
+<% if product.highlighted_at.blank? %>
+  <%= link_to(t("highlight_products.do_highlight"), highlight_admin_product_url(product), :method => :post) unless product.deleted? %>
+<% else %>
+  <%= link_to(t("highlight_products.do_unhighlight"), unhighlight_admin_product_url(product), :method => :post) unless product.deleted? %>
+<% end %>
