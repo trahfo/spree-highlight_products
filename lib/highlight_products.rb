@@ -13,7 +13,7 @@ module HighlightProducts
 
       #Include code
       Admin::ProductsController.send(:include, HighlightProducts::AdminProductsControllerExt)
-      Product.send(:include, HighlightedProducts::ProductModelExt)
+      Product.send(:include, HighlightProducts::ProductModelExt)
 
     end
 
