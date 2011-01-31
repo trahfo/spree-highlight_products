@@ -8,7 +8,7 @@ I started off with [paulcc's promotions extension][3], but the only thing left o
 There is an [other extension also called promotions][4], which better deserves the name, as it's about actual promotions (lowered prices), and not about promoting something to the home page.
 
 ## Installation
-* Add extension to your Gemfile `gem 'highlight_products', :git => 'https://github.com/joshmcarthur/spree-highlight-products.git', :branch => 'rails3'`
+* Add extension to your Gemfile `gem 'highlight_products', :git => 'https://github.com/3months/spree-highlight_products.git', :branch => 'rails3'`
 * Run `bundle install`
 * Copy migrations and assets to your application by running `rake highlight_products:install`
 * Run `rake db:migrate` to update your schema, and reboot the server.
