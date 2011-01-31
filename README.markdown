@@ -13,9 +13,6 @@ There is an [other extension also called promotions][4], which better deserves t
 * Copy migrations and assets to your application by running `rake highlight_products:install`
 * Run `rake db:migrate` to update your schema, and reboot the server.
 
-Copy to your project's vendor/extensions dir, and make sure the naming is right (remove the 'spree-' prefix).
-Run rake db:migrate.
-Reboot the server.
 
 [1]: http://spreecommerce.com/ "Spree: Open Source E-Commerce for Ruby on Rails"
 [2]: http://hardcoreforkingaction.com "Hard-core forking action: a low frequency, web-tech blog by Benny Degezelle"
