@@ -5,7 +5,7 @@
   <% end unless product.deleted? -%>
 <% else %>
   <%= link_to unhighlight_admin_product_url(product), :class => 'icon-link' do -%>
-    <%= image_tag "arrow_up.png", :size => "16x16" -%>
+    <%= image_tag "arrow_down.png", :size => "16x16" -%>
     <%= t("highlight_products.do_unhighlight") -%>
   <% end unless product.deleted? -%>
 <% end %>
