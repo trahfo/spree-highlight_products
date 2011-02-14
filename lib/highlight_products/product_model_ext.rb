@@ -2,7 +2,7 @@ module HighlightProducts
   module ProductModelExt
     def self.included(base)
       base.class_eval do
-        scope :highlighted, :where => "products.highlighted_at IS NOT NULL", :order => "highlighted_at DESC"
+        scope :highlighted, where("products.highlighted_at IS NOT NULL").order("highlighted_at DESC")
 
         def highlight
           self.update_attribute(:highlighted_at, Time.current)
