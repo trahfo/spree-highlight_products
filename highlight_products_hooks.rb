@@ -1,4 +1,5 @@
-class HighlightProductsHooks < Spree::ThemeSupport::HookListener
-  insert_before :admin_products_index_row_actions, 'admin/products/highlight_product_button'
-  
-end
+Deface::Override.new(
+  :virtual_path => "admin/products/index",
+  :insert_bottom => "[data-hook='admin_products_index_row_actions']",
+  :partial => "admin/products/highlight_product_button",
+  :disabled => false)
