@@ -1,12 +1,9 @@
 <% if product.highlighted_at.blank? %>
-  <%= link_to highlight_admin_product_url(product), :class => 'icon-link', :method => :post do -%>
-    <%= image_tag "arrow_up.png", :size => "16x16" -%>
-    <%= t("highlight_products.do_highlight") -%>
+  <%= link_to highlight_admin_product_url(product), :class => 'icon-link' do -%>
+    <%= image_tag "highlight_off.png", :size => "16x16", :title => t("highlight_products.do_highlight") -%>
   <% end unless product.deleted? -%>
 <% else %>
-  <%= link_to unhighlight_admin_product_url(product), :class => 'icon-link', :method => :post do -%>
-    <%= image_tag "arrow_up.png", :size => "16x16" -%>
-    <%= t("highlight_products.do_unhighlight") -%>
+  <%= link_to unhighlight_admin_product_url(product), :class => 'icon-link' do -%>
+    <%= image_tag "highlight_on.png", :size => "16x16", :title => t("highlight_products.do_unhighlight") -%>
   <% end unless product.deleted? -%>
 <% end %>
-
