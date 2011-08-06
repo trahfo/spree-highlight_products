@@ -5,6 +5,9 @@ Rails.application.routes.draw do
         get 'highlight'
         get 'unhighlight'
       end
+      collection do
+        delete 'highlighted'
+      end
     end
   end
 end

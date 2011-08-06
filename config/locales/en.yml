@@ -5,3 +5,6 @@ en:
     do_unhighlight: Un-highlight
     product_has_been_highlighted: The product has been highlighted
     product_has_been_unhighlighted: The product is no longer highlighted
+    products_have_been_unhighlighted: 
+      one: "No products were unhighlighted"
+      other: "%{count} products were unhighlighted"

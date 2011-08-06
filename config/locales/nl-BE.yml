@@ -5,3 +5,6 @@ nl-BE:
     do_unhighlight: Uit de kijker halen
     product_has_been_highlighted: Het product werd in de kijker gezet
     product_has_been_unhighlighted: Het product staat niet langer in de kijker
+    products_have_been_unhighlighted:
+      one: Een product staat niet langer in de kijker
+      other: "%{count} producten staan niet langer in de kijker"

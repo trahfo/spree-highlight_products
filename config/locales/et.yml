@@ -5,3 +5,6 @@ et:
     do_unhighlight: Eemalda esiletõstetute hulgast
     product_has_been_highlighted: Toode on esile tõstetud
     product_has_been_unhighlighted: Toode ei ole enam esile tõstetud
+    products_have_been_unhighlighted: 
+      one: Toode ei ole enam esile tõstetud
+      other: Toode ei ole enam esile tõstetud
