@@ -1,5 +1,4 @@
 require 'spree_core'
-require 'highlight_products_hooks'
 
 module HighlightProducts
   class Engine < Rails::Engine
