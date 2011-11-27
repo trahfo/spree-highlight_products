@@ -2,7 +2,18 @@ module HighlightProducts
   module ProductModelExt
     def self.included(base)
       base.class_eval do
+                
         scope :highlighted, where("products.highlighted_at IS NOT NULL").order("highlighted_at DESC")
+        
+        scope :highlighted_within_days, lambda { |value|
+          where('products.highlighted_at >= ?', value.to_i.day.ago).order("highlighted_at DESC")
+        }
+        
+        scope :ascend_by_highlighted_at, order("products.highlighted_at ASC")
+        scope :descend_by_highlighted_at, order("products.highlighted_at DESC")
+        
+        scope :ascend_by_freshness, order("products.highlighted_at ASC, products.updated_at ASC")
+        scope :descend_by_freshness, order("products.highlighted_at DESC, products.updated_at DESC")
 
         def highlight
           self.update_attribute(:highlighted_at, Time.current)

@@ -2,6 +2,9 @@ module HighlightProducts
   module AdminProductsControllerExt
     def self.included(base)
       base.class_eval do
+        
+        update.before :handle_highlighted
+        
         def highlight
           @product.highlight
           flash[:notice] = t("highlight_products.product_has_been_highlighted")
@@ -29,6 +32,17 @@ module HighlightProducts
             redirect_to admin_products_url
           end
         end
+        
+        protected
+        
+        def handle_highlighted
+          if (params[:product] || {}).delete(:highlighted).blank?
+            @product.unhighlight
+          else
+            @product.highlight
+          end
+        end
+        
       end
     end
   end
