@@ -1,5 +1,6 @@
 ---
 en:
+  show_highlighted: Show highlighted
   highlight_products:
     do_highlight: Highlight
     do_unhighlight: Un-highlight

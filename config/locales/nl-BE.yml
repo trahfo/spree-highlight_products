@@ -1,5 +1,6 @@
 ---
 nl-BE:
+  show_highlighted: Toon in de kijker
   highlight_products:
     do_highlight: In de kijker zetten
     do_unhighlight: Uit de kijker halen
