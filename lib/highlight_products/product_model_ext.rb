@@ -15,12 +15,20 @@ module HighlightProducts
         scope :ascend_by_freshness, order("products.highlighted_at ASC, products.updated_at ASC")
         scope :descend_by_freshness, order("products.highlighted_at DESC, products.updated_at DESC")
 
-        def highlight
+        def highlight!
           self.update_attribute(:highlighted_at, Time.current)
+        end
+        
+        def highlight
+          self.highlighted_at = Time.current
+        end
+        
+        def unhighlight!
+          self.update_attribute(:highlighted_at, nil)
         end
 
         def unhighlight
-          self.update_attribute(:highlighted_at, nil)
+          self.highlighted_at = nil
         end
 
         def self.best_sellers(n, start = 1.week.ago, finish = Time.now)
