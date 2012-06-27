@@ -11,8 +11,8 @@ module HighlightProducts
       end
 
       #Include code
-      Admin::ProductsController.send(:include, HighlightProducts::AdminProductsControllerExt)
-      Product.send(:include, HighlightProducts::ProductModelExt)
+      Spree::Admin::ProductsController.send(:include, HighlightProducts::AdminProductsControllerExt)
+      Spree::Product.send(:include, HighlightProducts::ProductModelExt)
 
     end
 

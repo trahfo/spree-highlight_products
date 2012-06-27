@@ -1,0 +1,4 @@
+<p>
+  <%= f.label :highlighted_at_is_not_null, t(:show_highlighted) %><br />
+  <%= f.check_box :highlighted_at_is_not_null, { :checked => !params[:q][:highlighted_at_is_not_null].blank? }, '1', '' %>
+</p>
