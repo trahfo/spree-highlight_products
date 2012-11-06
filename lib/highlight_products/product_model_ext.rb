@@ -39,13 +39,13 @@ module HighlightProducts
           #
           # Jul09: had problem with :select vs :include in checkout_complete, hence the DIY
           # Aug11: replaced sql joins with fancy associations
-          best_n = Order.between(start,finish).find(:all,
+          best_n = Spree::Order.between(start,finish).find(:all,
                              :joins => [{:line_items => :product}],
                              :select => "product_id, SUM(quantity) sum",
                              :conditions => "completed_at IS NOT NULL AND spree_products.deleted_at IS NULL",
                              :group => "product_id ORDER BY sum DESC",
                              :limit => n)
-          best_n.map {|o| [o.sum, Product.find(o.product_id)] }
+          best_n.map {|o| [o.sum, Spree::Product.find(o.product_id)] }
         end
       end
     end

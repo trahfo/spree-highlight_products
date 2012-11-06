@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'highlight_products'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.summary     = 'Spree extension, simple way to select products to highlight.'
   #s.description = 'Add (optional) gem description here'
   s.required_ruby_version = '>= 1.8.7'
